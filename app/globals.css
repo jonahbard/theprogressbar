@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -18,10 +18,21 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+.hero-title {
+  font-size: 100pt;
+  /* font-style: bold; */
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-left: 3%;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  max-width: 700px;
+}
+.hero-world-icon {
+  font-size: 170pt;
+  padding-right: 3%;
+
 }
