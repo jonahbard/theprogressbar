@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hero-title {
+  font-size: 100pt;
+  font-style: bold;
+  font-family: sans-serif;
+  padding-left: 3%;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  max-width: 750px;
+}
+body {
+  background: white;
+}
+p {
+  font-family: sans-serif;
+  padding-left: 5%
+}
+.hero-world-icon {
+  font-size: 170pt;
+  padding-right: 3%;
+
 }

@@ -5,7 +5,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div style={{
+  display: 'flex' }}>
+
+          <HeroText />
+          <HeroWorldIcon />
+        </div>
+
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,10 +23,18 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
+}
+
+function HeroText(){
+  return <h1 class="hero-title"> <br/> how are we doing? </h1>;
+}
+
+function HeroWorldIcon() {
+  return <h1 class="hero-world-icon"> 🌎 </h1>;
 }
 
 export default App;
