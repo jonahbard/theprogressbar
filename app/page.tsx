@@ -29,3 +29,15 @@ function HeroText(){
 function HeroWorldIcon() {
   return <h1 className="hero-world-icon"> 🌎 </h1>;
 }
+
+function TextOverBold() {
+  return
+}
+
+function ProgressBar() {
+  return
+}
+
+function IntroTopicHeader(){
+  
+}
