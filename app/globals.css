@@ -25,7 +25,6 @@ body {
   font-size: 100pt;
   /* font-style: bold; */
   font-family: sans-serif;
-  font-weight: bold;
   padding-left: 3%;
   color: rgb(0, 0, 0);
   text-align: left;
@@ -35,4 +34,17 @@ body {
   font-size: 170pt;
   padding-right: 3%;
 
+}
+
+.scrollText {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 5s;
+}
+
+.fadeIn {
+  opacity: 1 !important;
 }

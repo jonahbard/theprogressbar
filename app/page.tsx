@@ -1,4 +1,6 @@
 import './globals.css';
+import { useEffect, useState } from 'react';
+
 
 export default function Home() {
   return (
@@ -12,9 +14,10 @@ function BasicHomePage() {
     <div className="App">
       <header className="App-header">
         <div style={{
-  display: 'flex' }}>
+  display: 'flex', justifyContent: 'space-between' }}>
 
           <HeroText />
+          <div style={{flexGrow: 1}}></div>
           <HeroWorldIcon />
         </div>
       </header>
