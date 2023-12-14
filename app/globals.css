@@ -23,8 +23,6 @@ body {
 
 .hero-title {
   font-size: 100pt;
-  /* font-style: bold; */
-  font-family: sans-serif;
   padding-left: 3%;
   color: rgb(0, 0, 0);
   text-align: left;
@@ -36,15 +34,18 @@ body {
 
 }
 
-.scrollText {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 5s;
+html {
+  scroll-snap-type: y mandatory;
 }
 
-.fadeIn {
-  opacity: 1 !important;
+h1 {
+  font-size: 50pt;
+  padding-left: 3%;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }

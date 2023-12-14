@@ -13,18 +13,18 @@ function BasicHomePage() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{
+        <section style={{
   display: 'flex', justifyContent: 'space-between' }}>
 
           <HeroText />
           <div style={{flexGrow: 1}}></div>
           <HeroWorldIcon />
-        </div>
+        </section>
       </header>
-      <body>
-        <div style={{height: '500px'}}></div>
-        <Page1 />
-      </body>
+      <header>
+          <div style={{height: '500px'}}></div>
+          <Page1 />
+      </header>
     </div>
   );
 }
@@ -51,9 +51,10 @@ function IntroTopicHeader(){
 
 function Page1(){
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-        <h1 style={{fontSize: '70px', marginBottom: '300px'}}>human civilization began around 12,000 years ago.</h1>
-        <h1 style={{fontSize: '70px', fontWeight: 'bold'}}>since then, we’ve made incredible leaps in both technology and society.</h1>
-    </div>
+    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <h1 style={{marginBottom: '300px'}}>human civilization began around 12,000 years ago.</h1>
+        <h1 style={{fontWeight: 'bold'}}>since then, we’ve made incredible leaps in both technology and society.</h1>
+
+    </section>
 );
 }
