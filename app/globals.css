@@ -22,7 +22,7 @@ body {
 }
 
 .hero-title {
-  font-size: 100pt;
+  font-size: 50pt;
   padding-left: 3%;
   color: rgb(0, 0, 0);
   text-align: left;
@@ -39,7 +39,14 @@ html {
 }
 
 h1 {
-  font-size: 50pt;
+  font-size: 35pt;
+  padding-left: 3%;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+h2 {
+  font-size: 25pt;
   padding-left: 3%;
   color: rgb(0, 0, 0);
   text-align: left;

@@ -24,6 +24,11 @@ function BasicHomePage() {
       <header>
           <div style={{height: '500px'}}></div>
           <Page1 />
+          <div style={{height: '500px'}}></div>
+          <Page2 />
+          <div style={{height: '500px'}}></div>
+          <Page3 />
+          <div style={{height: '500px'}}></div>
       </header>
     </div>
   );
@@ -51,10 +56,32 @@ function IntroTopicHeader(){
 
 function Page1(){
   return (
-    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-        <h1 style={{marginBottom: '300px'}}>human civilization began around 12,000 years ago.</h1>
-        <h1 style={{fontWeight: 'bold'}}>since then, we’ve made incredible leaps in both technology and society.</h1>
+    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
+        <h2 style={{marginBottom: '300px'}}>human civilization began around 12,000 years ago.</h2>
+        <h2 style={{fontWeight: 'bold'}}>since then, we’ve made incredible leaps in both technology and society.</h2>
 
     </section>
 );
+}
+
+
+function Page(){
+
+}
+
+function Page2(){
+  return (
+    <section>
+      <h1>first, let’s look at progress in technology.</h1>
+    </section>
+  )
+}
+
+function Page3(){
+  return (
+    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
+        <h2 style={{marginBottom: '300px'}}>in 10,000 BCE, the average 5-year-old, well...  didn’t live past age 2.</h2>
+        <h2 style={{fontWeight: 'bold'}}>through biomedical advancements, we’ve reduced infant mortality rates by over 90%.</h2>
+    </section>
+  )
 }
