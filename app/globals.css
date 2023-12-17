@@ -8,14 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
@@ -23,14 +15,13 @@ body {
 
 .hero-title {
   font-size: 50pt;
-  padding-left: 3%;
+  padding-left: 5%;
   color: rgb(0, 0, 0);
   text-align: left;
-  max-width: 700px;
 }
 .hero-world-icon {
-  font-size: 170pt;
-  padding-right: 3%;
+  font-size: 100pt;
+  padding-right: 5%;
 
 }
 
@@ -39,20 +30,29 @@ html {
 }
 
 h1 {
-  font-size: 35pt;
-  padding-left: 3%;
+  font-size: 3vw;
+  padding-left: 5%;
+  padding-right: 5%;
   color: rgb(0, 0, 0);
   text-align: left;
 }
 
 h2 {
-  font-size: 25pt;
-  padding-left: 3%;
+  font-size: calc(15pt + 1vw);
+  padding-left: 5%;
+  padding-right: 5%;
   color: rgb(0, 0, 0);
   text-align: left;
+}
+
+h3 {
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(82, 82, 82)
 }
 
 section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  height: 100vh;
 }
