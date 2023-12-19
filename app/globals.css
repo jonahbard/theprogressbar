@@ -30,7 +30,7 @@ html {
 }
 
 h1 {
-  font-size: 3vw;
+  font-size: calc(15pt + 2vw);
   padding-left: 5%;
   padding-right: 5%;
   color: rgb(0, 0, 0);

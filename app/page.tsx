@@ -35,16 +35,19 @@ function TechSections(){
       <header>
           <Page2 />
           <Page3 />
+          <Page4 />
+          <Page5 />
+          <Page6 />
       </header>
    )
 }
 
 function HeroText(){
-  return <h1 className="hero-title"> <br/> how are we doing? </h1>;
+  return <h1 className="hero-title"> how are we doing? </h1>;
 }
 
 function HeroWorldIcon() {
-  return <h1 className="hero-world-icon"> 🌎 </h1>;
+  return <h1 className="hero-world-icon" style={{marginBottom: '50px'}}> 🌎 </h1>;
 }
 
 
@@ -67,9 +70,38 @@ function Page2(){
 function Page3(){
   return (
     <H2Page 
-      text1='in 10,000 BCE, the average 5-year-old, well...  didn’t live past age 2.'
-      text2='through biomedical advancements, we’ve reduced infant mortality rates by over 90%.'
-      barPath='/infantmortalitybar.svg'
+      text1='in 10,000 BCE, the average 15-year-old, well...  didn’t live past age 12.'
+      text2='through biomedical advancements, we’ve reduced child mortality rates by over 90%.'
+      barPath='/childmortalitybar.svg'
+    />
+  )
+}
+
+function Page4(){
+  return (
+    <H2Page 
+      text1='🔥 what a dub.'
+      text2='but wait. with that, we’ve more than doubled the average human lifespan.'
+      barPath='/lifespanbar1.svg'
+    />
+  )
+}
+
+function Page5(){
+  return (
+    <H2Page 
+      text1=''
+      text2='the highest regional life expectancy is now in Monaco, at 89.6 years.'
+      barPath='/lifespanbar2.svg'
+    />
+  )
+}
+
+function Page6(){
+  return (
+    <H2Page 
+      text1='that’s a roughly 3X improvement.'
+      text2='good shit, humanity.'
     />
   )
 }
@@ -77,7 +109,7 @@ function Page3(){
 function H1Page({ title } : { title: string }){
   return (
     <section>
-      <h1 style={{paddingTop: '150px'}}>{title}</h1>
+      <h1 style={{paddingTop: '30vh'}}>{title}</h1>
     </section>
   )
 }
@@ -85,10 +117,10 @@ function H1Page({ title } : { title: string }){
 function H2Page({ text1, text2, barPath } : { text1: string, text2: string, barPath?: string }){
   return (
     <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
-      <h2 style={{marginBottom: '150px'}}>{text1}</h2>
+      <h2 style={{marginBottom: '50px'}}>{text1}</h2>
       <h2 style={{fontWeight: 'bold'}}>{text2}</h2>
       {barPath && (
-        <div style={{ paddingLeft: '5%', paddingRight: '10%', paddingTop: '100px'}}>
+        <div style={{ paddingLeft: '5%', paddingRight: '5%', paddingTop: '100px'}}>
           <Image
             src={barPath}
             alt="infant mortality progress bar"
