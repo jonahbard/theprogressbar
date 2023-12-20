@@ -63,7 +63,7 @@ function Intro1(){
 
 function Page2(){
   return (
-    <H1Page title="first, let’s look at progress in technology." />
+    <H1Page title="1. technology" />
   )
 }
 
