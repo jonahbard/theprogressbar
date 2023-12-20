@@ -17,10 +17,11 @@ function StartPage() {
   return (
     <div className="App">
       <header className="App-header">
-        <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
+        {/*style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}*/}
+        <section className='flex flex-col items-left justify-center items-start' >
           <HeroWorldIcon />
           <HeroText />
-          <h3>
+          <h3 className=''>
             a visualization of human progress
           </h3>
         </section>
