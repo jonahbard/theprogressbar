@@ -61,8 +61,8 @@ function HeroWorldIcon() {
 function Intro1(){
   return (
     <H2Page 
-      text1='civilization began around 12,000 years ago.'
-      text2='since then, we’ve made incredible leaps in both technology and society.'
+      text={['civilization began around 12,000 years ago.',
+      'since then, we’ve made incredible leaps in both technology and society.']}
     />
 );
 }
@@ -77,8 +77,7 @@ function Page2(){
 function Page3(){
   return (
     <H2Page 
-      text1='in 10,000 BCE, the average 15-year-old, well...  didn’t live past age 12.'
-      text2='through biomedical advancements, we’ve reduced child mortality rates by over 90%.'
+      text={['in 10,000 BCE, the average 15-year-old, well...  didn’t live past age 12.', 'through biomedical advancements, we’ve reduced child mortality rates by over 90%.']}
       barPath='/childmortalitybar.svg'
     />
   )
@@ -87,8 +86,7 @@ function Page3(){
 function Page4(){
   return (
     <H2Page 
-      text1='🔥 what a dub.'
-      text2='but wait. with that, we’ve more than doubled the average human lifespan.'
+      text={['🔥 what a dub.', 'but wait. with that, we’ve more than doubled the average human lifespan.']}
       barPath='/lifespanbar1.svg'
     />
   )
@@ -97,8 +95,7 @@ function Page4(){
 function Page5(){
   return (
     <H2Page 
-      text1=''
-      text2='the highest regional life expectancy is now in Monaco, at 89.6 years.'
+      text={['the highest regional life expectancy is now in Monaco, at 89.6 years.']}
       barPath='/lifespanbar2.svg'
     />
   )
@@ -107,8 +104,7 @@ function Page5(){
 function Page6(){
   return (
     <H2Page 
-      text1='that’s a roughly 3X improvement.'
-      text2='nice work, humanity.'
+      text={['that’s a roughly 3X improvement.', 'nice work, humanity.']}
     />
   )
 }
@@ -116,14 +112,11 @@ function Page6(){
 function Page7(){
   return (
     <H2Page 
-      text1='the internet connects, informs, and educates the world.
+      text={['the internet connects, informs, and educates the world.',
 
-
-      since 1983, it has scaled to over 5,000,000,000 people. 
+      'since 1983, it has scaled to over 5,000,000,000 people.',
       
-      
-      we’re approaching 70% internet penetration worldwide.'
-      text2=''
+      'we’re approaching 70% internet penetration worldwide.']}
       barPath='/internetbar.svg'
     />
   )
@@ -132,16 +125,15 @@ function Page7(){
 function Page8(){
   return (
     <H2Page 
-      text1='The globe’s rapidly growing economies are fueled by energy generation. 
+      text={[
+        'The globe’s rapidly growing economies are fueled by energy generation.',
 
-
-      But fossil fuel emissions have deteriorated ecosystems and natural environmental cycles. 
-      
-      
-      Slowly, we’re making the transition to a sustainably-powered future. 
-      Clean energy sources account for roughly 20% of global energy production.'      
-      text2=''
-      barPath='/internetbar.svg'
+        'But fossil fuel emissions have deteriorated ecosystems and natural environmental cycles.', 
+        
+        'Slowly, we’re making the transition to a sustainably-powered future.',
+        'Clean energy sources account for roughly 20% of global energy production.'
+      ]}
+      barPath='/energybar.svg'
     />
   )
 }
@@ -157,14 +149,15 @@ function Page9(){
 function Page10(){
   return (
     <H2Page 
-      text1='Most humans who ever lived were slaves, indentured servants, or peasant laborers. As recently as the 1800s over 80% of the world was in extreme poverty.
+      text={[
+        'Most humans who ever lived were slaves, indentured servants, or peasant laborers. As recently as the 1800s over 80% of the world was in extreme poverty.',
 
-      As of 2022 we’ve chopped this number in half.
-      And then we did it again.
-      And then again.
-      
-      9.2% of the world’s residents now live in extreme poverty.'
-      text2=''
+        'As of 2022 we’ve chopped this number in half.',
+        'And then we did it again.',
+        'And then again.',
+        
+        '9.2% of the world’s residents now live in extreme poverty.'
+      ]}
       barPath='/povertybar.svg'
     />
   )
@@ -173,16 +166,15 @@ function Page10(){
 function Page11(){
   return (
     <H2Page 
-      text1='writing is pretty cool.
-
-      it made history start existing. it made complex economies possible. it continues to enable billions of people to support their family and participate in a democratic society.
-      
-      12,000 years ago no one knew how to write.
-      
-      in 1900 hardly 20% of the world was literate.
-      
-      this number is now 87%.'
-      text2=''
+      text={[
+        'writing is pretty cool.',
+        'it made history start existing. it made complex economies possible. it continues to enable billions of people to support their family and participate in a democratic society.',
+        
+        '12,000 years ago no one knew how to write.',
+        
+        'in 1900 hardly 20% of the world was literate',
+        
+        'this number is now 87%.']}
       barPath='/literacybar.svg'
     />
   )
@@ -191,10 +183,11 @@ function Page11(){
 function Page12(){
   return (
     <H2Page 
-      text1='modern democratic governments ensure fundamental freedoms and human rights to citizens.
+      text={[
+        'modern democratic governments ensure fundamental freedoms and human rights to citizens.',
 
-      since the enlightenment, we’ve reached roughly 2B people living in democracies.'
-      text2=''
+        'since the enlightenment, we’ve reached roughly 2B people living in democracies.'
+      ]}
       barPath='/democracybar.svg'
     />
   )
@@ -209,11 +202,22 @@ function H1Page({ title } : { title: string }){
   )
 }
 
-function H2Page({ text1, text2, barPath } : { text1: string, text2: string, barPath?: string }){
+function H2Page({ text, barPath } : { text: string[], barPath?: string }){
   return (
     <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
-      <h2 style={{marginBottom: '50px'}}>{text1}</h2>
-      <h2 style={{fontWeight: 'bold'}}>{text2}</h2>
+      {text.map((line, index) => 
+        <h2 
+          key={index} 
+          style={  
+            index === text.length - 1 
+              ? {fontWeight: 'bold'}
+              : {marginBottom: '50px'} 
+          }
+        >
+          {line}
+        </h2>
+      )}
+      {/* also make the last line bold */}
       {barPath && (
         <div style={{ paddingLeft: '5%', paddingRight: '5%', paddingTop: '100px'}}>
           <Image
