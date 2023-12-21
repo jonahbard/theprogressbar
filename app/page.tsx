@@ -39,6 +39,12 @@ function TechSections(){
           <Page4 />
           <Page5 />
           <Page6 />
+          <Page7 />
+          <Page8 />
+          <Page9 />
+          <Page10 />
+          <Page11 />
+          <Page12 />
       </header>
    )
 }
@@ -102,10 +108,98 @@ function Page6(){
   return (
     <H2Page 
       text1='that’s a roughly 3X improvement.'
-      text2='good shit, humanity.'
+      text2='nice work, humanity.'
     />
   )
 }
+
+function Page7(){
+  return (
+    <H2Page 
+      text1='the internet connects, informs, and educates the world.
+
+
+      since 1983, it has scaled to over 5,000,000,000 people. 
+      
+      
+      we’re approaching 70% internet penetration worldwide.'
+      text2=''
+      barPath='/internetbar.svg'
+    />
+  )
+}
+
+function Page8(){
+  return (
+    <H2Page 
+      text1='The globe’s rapidly growing economies are fueled by energy generation. 
+
+
+      But fossil fuel emissions have deteriorated ecosystems and natural environmental cycles. 
+      
+      
+      Slowly, we’re making the transition to a sustainably-powered future. 
+      Clean energy sources account for roughly 20% of global energy production.'      
+      text2=''
+      barPath='/internetbar.svg'
+    />
+  )
+}
+
+function Page9(){
+  return (
+    <H1Page 
+      title='2. society'
+    />
+  )
+}
+
+function Page10(){
+  return (
+    <H2Page 
+      text1='Most humans who ever lived were slaves, indentured servants, or peasant laborers. As recently as the 1800s over 80% of the world was in extreme poverty.
+
+      As of 2022 we’ve chopped this number in half.
+      And then we did it again.
+      And then again.
+      
+      9.2% of the world’s residents now live in extreme poverty.'
+      text2=''
+      barPath='/povertybar.svg'
+    />
+  )
+}
+
+function Page11(){
+  return (
+    <H2Page 
+      text1='writing is pretty cool.
+
+      it made history start existing. it made complex economies possible. it continues to enable billions of people to support their family and participate in a democratic society.
+      
+      12,000 years ago no one knew how to write.
+      
+      in 1900 hardly 20% of the world was literate.
+      
+      this number is now 87%.'
+      text2=''
+      barPath='/literacybar.svg'
+    />
+  )
+}
+
+function Page12(){
+  return (
+    <H2Page 
+      text1='modern democratic governments ensure fundamental freedoms and human rights to citizens.
+
+      since the enlightenment, we’ve reached roughly 2B people living in democracies.'
+      text2=''
+      barPath='/democracybar.svg'
+    />
+  )
+}
+
 
 function H1Page({ title } : { title: string }){
   return (
