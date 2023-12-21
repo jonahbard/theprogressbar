@@ -22,7 +22,7 @@ function StartPage() {
           <HeroWorldIcon />
           <HeroText />
           <h3 className=''>
-            a visualization of human progress
+            the progress bar: a brief tour of human advancements
           </h3>
         </section>
       </header>
