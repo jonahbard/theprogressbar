@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <StartPage />
-      <TechSections />
+      <Sections />
     </div>
   )
 }
@@ -22,7 +22,7 @@ function StartPage() {
           <HeroWorldIcon />
           <HeroText />
           <h3 className=''>
-            the progress bar: a brief tour of human advancements
+            The Progress Bar: A brief tour of human advancements
           </h3>
         </section>
       </header>
@@ -31,26 +31,26 @@ function StartPage() {
   );
 }
 
-function TechSections(){
+function Sections(){
    return (
       <header>
-          <Page2 />
-          <Page3 />
-          <Page4 />
-          <Page5 />
-          <Page6 />
-          <Page7 />
-          <Page8 />
-          <Page9 />
-          <Page10 />
-          <Page11 />
-          <Page12 />
+          <TechnologyHeader />
+          <Life1 />
+          <Life2 />
+          <Life3 />
+          <NiceWork />
+          <Internet />
+          <Energy />
+          <SocietyHeader />
+          <Poverty />
+          <Literacy />
+          <Democracy />
       </header>
    )
 }
 
 function HeroText(){
-  return <h1 className="hero-title"> how are we doing? </h1>;
+  return <h1 className="hero-title"> How are we doing? </h1>;
 }
 
 function HeroWorldIcon() {
@@ -61,68 +61,73 @@ function HeroWorldIcon() {
 function Intro1(){
   return (
     <H2Page 
-      text={['civilization began around 12,000 years ago.',
-      'since then, we’ve made incredible leaps in both technology and society.']}
+      text={['Civilization began around 12,000 years ago.',
+      'Since then, we’ve made incredible leaps in both technology and society.']}
     />
 );
 }
 
 
-function Page2(){
+function TechnologyHeader(){
   return (
-    <H1Page title="1. technology" />
+    <H1Page title="1. Technology" />
   )
 }
 
-function Page3(){
+function Life1(){
   return (
     <H2Page 
-      text={['in 10,000 BCE, the average 15-year-old, well...  didn’t live past age 12.', 'through biomedical advancements, we’ve reduced child mortality rates by over 90%.']}
+      text={['In 10,000 BCE, the average 15-year-old, well...  likely didn’t live past age 12.', 'Through biomedical advancements, we’ve reduced child mortality rates by over 90%.']}
       barPath='/childmortalitybar.svg'
+      barPathSmall='/infantmortalitysmall.svg'
     />
   )
 }
 
-function Page4(){
+function Life2(){
   return (
     <H2Page 
-      text={['🔥 what a dub.', 'but wait. with that, we’ve more than doubled the average human lifespan.']}
+      text={['🔥 What a dub.', 'But wait. with that, we’ve more than doubled the average human lifespan.']}
       barPath='/lifespanbar1.svg'
+      barPathSmall='/lifespanbar1small.svg'
     />
   )
 }
 
-function Page5(){
+function Life3(){
   return (
     <H2Page 
-      text={['the highest regional life expectancy is now in Monaco, at 89.6 years.']}
+      text={['The highest regional life expectancy is now in Monaco, at 89.6 years.']}
       barPath='/lifespanbar2.svg'
+      barPathSmall='/lifespanbar2small.svg'
     />
   )
 }
 
-function Page6(){
+function NiceWork(){
   return (
     <H2Page 
-      text={['that’s a roughly 3X improvement.', 'nice work, humanity.']}
+      text={['That’s a roughly 3X improvement.', 'Nice work, humanity.']}
     />
   )
 }
 
-function Page7(){
+function Internet(){
   return (
     <H2Page 
-      text={['the internet connects, informs, and educates the world.',
+      text={['The internet connects, informs, and educates the world.',
 
-      'since 1983, it has scaled to over 5,000,000,000 people.',
+      'Since 1983, it has scaled to over 5,000,000,000 people.',
       
-      'we’re approaching 70% internet penetration worldwide.']}
+      'We’re approaching 70% internet penetration worldwide.']}
       barPath='/internetbar.svg'
+      barPathSmall='/internetbarsmall.svg'
+
     />
   )
 }
 
-function Page8(){
+function Energy(){
   return (
     <H2Page 
       text={[
@@ -134,19 +139,20 @@ function Page8(){
         'Clean energy sources account for roughly 20% of global energy production.'
       ]}
       barPath='/energybar.svg'
+      barPathSmall='/energybarsmall.svg'
     />
   )
 }
 
-function Page9(){
+function SocietyHeader(){
   return (
     <H1Page 
-      title='2. society'
+      title='2. Society'
     />
   )
 }
 
-function Page10(){
+function Poverty(){
   return (
     <H2Page 
       text={[
@@ -159,36 +165,43 @@ function Page10(){
         '9.2% of the world’s residents now live in extreme poverty.'
       ]}
       barPath='/povertybar.svg'
+      barPathSmall='/povertybarsmall.svg'
     />
   )
 }
 
-function Page11(){
+function Literacy(){
   return (
     <H2Page 
       text={[
-        'writing is pretty cool.',
-        'it made history start existing. it made complex economies possible. it continues to enable billions of people to support their family and participate in a democratic society.',
+        'Writing is pretty cool.',
+        'It made history start existing. it made complex economies possible. it continues to enable billions of people to support their family and participate in a democratic society.',
         
         '12,000 years ago no one knew how to write.',
         
-        'in 1900 hardly 20% of the world was literate',
+        'In 1900 hardly 20% of the world was literate.',
         
-        'this number is now 87%.']}
+        'This number is now 87%.']}
       barPath='/literacybar.svg'
+      barPathSmall='/literacybarsmall.svg'
+
     />
   )
 }
 
-function Page12(){
+function Democracy(){
   return (
     <H2Page 
       text={[
-        'modern democratic governments ensure fundamental freedoms and human rights to citizens.',
+        'Modern democratic governments ensure fundamental freedoms and human rights to citizens.',
 
-        'since the enlightenment, we’ve reached roughly 2B people living in democracies.'
+        'Since the enlightenment, we’ve reached roughly 2,000,000,000 people living in democracies.',
+
+        'We still have a ways to go.'
       ]}
       barPath='/democracybar.svg'
+      barPathSmall='/democracybarsmall.svg'
+
     />
   )
 }
@@ -202,7 +215,7 @@ function H1Page({ title } : { title: string }){
   )
 }
 
-function H2Page({ text, barPath } : { text: string[], barPath?: string }){
+function H2Page({ text, barPath, barPathSmall} : { text: string[], barPath?: string , barPathSmall?: string}){
   return (
     <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
       {text.map((line, index) => 
@@ -210,23 +223,36 @@ function H2Page({ text, barPath } : { text: string[], barPath?: string }){
           key={index} 
           style={  
             index === text.length - 1 
-              ? {fontWeight: 'bold'}
+              ? {fontWeight: 'bold', marginBottom: '50px'}
               : {marginBottom: '50px'} 
           }
         >
           {line}
         </h2>
       )}
-      {/* also make the last line bold */}
       {barPath && (
-        <div style={{ paddingLeft: '5%', paddingRight: '5%', paddingTop: '100px'}}>
+        <div className="px-5 pt-25" style={{ paddingLeft: '5%', paddingRight: '5%', paddingTop: '50px'}}>
+        {/* will show when screen width is less than 500px */}
+        {barPathSmall && (
           <Image
-            src={barPath}
-            alt="infant mortality progress bar"
-            width={1000}
-            height={100}
+             className={"sm:hidden"}
+             src={barPathSmall}
+             alt="progress bar mini"
+             width={500}
+             height={50}
           />
-        </div>
+        )}
+        {/* will show when screen width is more than or equal to 500px */}
+        {barPath && (
+          <Image
+             className={"hidden sm:block"}
+             src={barPath}
+             alt="progress bar"
+             width={1000}
+             height={100}
+          />
+        )}
+     </div>
       )}
       
       
@@ -234,17 +260,6 @@ function H2Page({ text, barPath } : { text: string[], barPath?: string }){
   )
 }
 
-
-
-
-function TextOverBold() {
-  return
-}
-
 function ProgressBar() {
   return
-}
-
-function IntroTopicHeader(){
-  
 }
