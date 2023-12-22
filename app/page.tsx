@@ -22,7 +22,7 @@ function StartPage() {
           <HeroWorldIcon />
           <HeroText />
           <h3 className=''>
-            The Progress Bar: A brief tour of human advancements
+            a brief tour of human advancements
           </h3>
         </section>
       </header>
@@ -50,7 +50,7 @@ function Sections(){
 }
 
 function HeroText(){
-  return <h1 className="hero-title"> How are we doing? </h1>;
+  return <h1 className="hero-title"> how are we doing? </h1>;
 }
 
 function HeroWorldIcon() {
@@ -79,7 +79,7 @@ function Life1(){
     <H2Page 
       text={['In 10,000 BCE, the average 15-year-old, well...  likely didn’t live past age 12.', 'Through biomedical advancements, we’ve reduced child mortality rates by over 90%.']}
       barPath='/childmortalitybar.svg'
-      barPathSmall='/infantmortalitysmall.svg'
+      barPathSmall='/childmortalitysmall.svg'
     />
   )
 }
