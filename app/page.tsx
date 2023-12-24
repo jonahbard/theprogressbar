@@ -195,7 +195,7 @@ function Democracy(){
       text={[
         'Modern democratic governments ensure fundamental freedoms and human rights to citizens.',
 
-        'Since the enlightenment, we’ve reached roughly 2,000,000,000 people living in democracies.',
+        'Since the enlightenment, we’ve reached roughly 3.7B people living in democracies.',
 
         'We still have a ways to go.'
       ]}
