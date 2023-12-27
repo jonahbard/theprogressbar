@@ -3,7 +3,6 @@
 import './globals.css';
 import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react';
 import Image from 'next/image';
-import Navbar from './scrollprogressbar';
 import BasicProgressBarGraphic from './basicprogressbargraphic';
 
 
