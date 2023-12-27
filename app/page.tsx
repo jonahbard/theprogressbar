@@ -1,11 +1,17 @@
+'use client'
+
 import './globals.css';
 import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import Navbar from './scrollprogressbar';
+import BasicProgressBarGraphic from './basicprogressbargraphic';
+
 
 
 export default function Home() {
   return (
     <div>
+      <BasicProgressBarGraphic />
       <StartPage />
       <Sections />
     </div>
@@ -175,7 +181,8 @@ function Literacy(){
     <H2Page 
       text={[
         'Writing is pretty cool.',
-        'It made history start existing. it made complex economies possible. it continues to enable billions of people to support their family and participate in a democratic society.',
+
+        'It made history start existing. it made complex economies possible. It continues to enable billions of people to support their family and participate in a democratic society.',
         
         '12,000 years ago no one knew how to write.',
         
