@@ -6,6 +6,7 @@ import Image from 'next/image';
 import H2Page from './H2Page'
 import H1Page from './H1Page'
 import BasicProgressBarGraphic from './basicprogressbargraphic';
+import HoveringX from './HoveringX'
 
 
 
@@ -31,6 +32,7 @@ export default function Home() {
   return (
     <div>
       <BasicProgressBarGraphic />
+      <HoveringX />
       <StartPage />
       <Sections />
     </div>
