@@ -3,6 +3,8 @@
 import './globals.css';
 import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react';
 import Image from 'next/image';
+import H2Page from './H2Page'
+import H1Page from './H1Page'
 import BasicProgressBarGraphic from './basicprogressbargraphic';
 
 
@@ -92,7 +94,7 @@ function Life1(){
 function Life2(){
   return (
     <H2Page 
-      text={['🔥 What a dub.', 'But wait. with that, we’ve more than doubled the average human lifespan.']}
+      text={['🔥 Awesome.', 'But wait. With that, we’ve more than doubled the average human lifespan.']}
       barPath='/lifespanbar1.svg'
       barPathSmall='/lifespanbar1small.svg'
     />
@@ -163,11 +165,11 @@ function Poverty(){
       text={[
         'Most humans who ever lived were slaves, indentured servants, or peasant laborers. As recently as the 1800s over 80% of the world was in extreme poverty.',
 
-        'As of 2022 we’ve chopped this number in half.',
+        'We chopped this number in half.',
         'And then we did it again.',
         'And then again.',
         
-        '9.2% of the world’s residents now live in extreme poverty.'
+        'As of 2022 9.2% of the world’s residents now live in extreme poverty.'
       ]}
       barPath='/povertybar.svg'
       barPathSmall='/povertybarsmall.svg'
@@ -181,7 +183,7 @@ function Literacy(){
       text={[
         'Writing is pretty cool.',
 
-        'It made history start existing. it made complex economies possible. It continues to enable billions of people to support their family and participate in a democratic society.',
+        'It made history start existing. It made complex economies possible. It continues to enable billions of people to support their family and participate in a democratic society.',
         
         '12,000 years ago no one knew how to write.',
         
@@ -213,58 +215,7 @@ function Democracy(){
 }
 
 
-function H1Page({ title } : { title: string }){
-  return (
-    <section>
-      <h1 style={{paddingTop: '30vh'}}>{title}</h1>
-    </section>
-  )
-}
 
-function H2Page({ text, barPath, barPathSmall} : { text: string[], barPath?: string , barPathSmall?: string}){
-  return (
-    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center'}}>
-      {text.map((line, index) => 
-        <h2 
-          key={index} 
-          style={  
-            index === text.length - 1 
-              ? {fontWeight: 'bold', marginBottom: '50px'}
-              : {marginBottom: '50px'} 
-          }
-        >
-          {line}
-        </h2>
-      )}
-      {barPath && (
-        <div className="px-5 pt-25" style={{ paddingLeft: '5%', paddingRight: '5%', paddingTop: '50px'}}>
-        {/* will show when screen width is less than 500px */}
-        {barPathSmall && (
-          <Image
-             className={"sm:hidden"}
-             src={barPathSmall}
-             alt="progress bar mini"
-             width={500}
-             height={50}
-          />
-        )}
-        {/* will show when screen width is more than or equal to 500px */}
-        {barPath && (
-          <Image
-             className={"hidden sm:block"}
-             src={barPath}
-             alt="progress bar"
-             width={1000}
-             height={100}
-          />
-        )}
-     </div>
-      )}
-      
-      
-    </section>
-  )
-}
 
 function ProgressBar() {
   return
