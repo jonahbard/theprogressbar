@@ -10,6 +10,24 @@ import BasicProgressBarGraphic from './basicprogressbargraphic';
 
 
 export default function Home() {
+  function triggerDownArrowKey() {
+    const downArrowEvent = new KeyboardEvent('keydown', { 
+      key: 'ArrowDown'
+    });
+    document.dispatchEvent(downArrowEvent);
+  }
+
+  useEffect(() => {
+    // Attach the event listener for click event
+    const handleClick = () => triggerDownArrowKey();
+    document.body.addEventListener('click', handleClick);
+
+    // Remove event listener on component unmount
+    return () => { 
+      document.body.removeEventListener('click', handleClick);
+    }
+  }, []);
+
   return (
     <div>
       <BasicProgressBarGraphic />
@@ -52,6 +70,7 @@ function Sections(){
           <Poverty />
           <Literacy />
           <Democracy />
+          <Thanks />
       </header>
    )
 }
@@ -211,6 +230,19 @@ function Democracy(){
       barPathSmall='/democracybarsmall.svg'
 
     />
+  )
+}
+
+function Thanks(){
+  return (
+    <section className='flex flex-col items-start justify-center'>
+      <h2>
+        Thanks for checking this out! Please share if you got something out of it.
+        <br/>
+        <br/>
+      </h2>
+      <h2 ><a className="text-blue-500 underline" href="https://twitter.com/@jonahbard__">Twitter</a>   -   <a className="text-blue-500 underline" href="https://github.com/jonahbard/theprogressbar">GitHub</a></h2>
+    </section>
   )
 }
 

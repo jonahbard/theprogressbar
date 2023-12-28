@@ -17,9 +17,6 @@ function BasicProgressBarGraphic() {
         let scrollY = window.scrollY;
         const scrollPercentage = (scrollY / (documentHeight - windowHeight))*100
         setProgressWidth(scrollPercentage);
-
-        console.log(scrollPercentage)
-
     }
 
     window.addEventListener("scroll", handleScroll);
