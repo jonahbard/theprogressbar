@@ -7,7 +7,7 @@ function HoveringX() {
     <div>
         <a href='https://twitter.com/@jonahbard__'>
             <Image
-                className='fixed bottom-10 right-10'
+                className='fixed bottom-10 right-7'
                 src={'/x.png'}
                 alt="share on x"
                 width={20}

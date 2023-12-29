@@ -3,32 +3,17 @@
 import './globals.css';
 import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react';
 import Image from 'next/image';
-import H2Page from './H2Page'
-import H1Page from './H1Page'
-import BasicProgressBarGraphic from './basicprogressbargraphic';
-import HoveringX from './HoveringX'
+import H2Page from './components/H2Page'
+import H1Page from './components/H1Page'
+import BasicProgressBarGraphic from './components/basicprogressbargraphic';
+import HoveringX from './components/HoveringX'
+import Link from 'next/link'
+
+
 
 
 
 export default function Home() {
-  function triggerDownArrowKey() {
-    const downArrowEvent = new KeyboardEvent('keydown', { 
-      key: 'ArrowDown'
-    });
-    document.dispatchEvent(downArrowEvent);
-  }
-
-  useEffect(() => {
-    // Attach the event listener for click event
-    const handleClick = () => triggerDownArrowKey();
-    document.body.addEventListener('click', handleClick);
-
-    // Remove event listener on component unmount
-    return () => { 
-      document.body.removeEventListener('click', handleClick);
-    }
-  }, []);
-
   return (
     <div>
       <BasicProgressBarGraphic />
@@ -239,11 +224,14 @@ function Thanks(){
   return (
     <section className='flex flex-col items-start justify-center'>
       <h2>
-        Thanks for checking this out! Please share if you got something out of it.
+        Thanks for checking this out! Please share if you got something out of it. Or, request new content + features on <a className="text-blue-500 underline" href="https://github.com/jonahbard/theprogressbar">GitHub</a>.
         <br/>
         <br/>
+        <br/>
+        {/* <a className="text-blue-500 underline" href="https://theprogressbar.co/references">References</a> */}
+        <Link href='/sources' className='italic'>Sources ➚</Link>
       </h2>
-      <h2 ><a className="text-blue-500 underline" href="https://twitter.com/@jonahbard__">Twitter</a>   -   <a className="text-blue-500 underline" href="https://github.com/jonahbard/theprogressbar">GitHub</a></h2>
+      <h2 ></h2>
     </section>
   )
 }

@@ -12,6 +12,7 @@
     "next": "^13.5.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-router-dom": "^6.21.1",
     "react-scroll-progress-bar": "^1.1.13"
   },
   "devDependencies": {

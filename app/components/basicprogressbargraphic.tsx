@@ -40,13 +40,13 @@ function BasicProgressBarGraphic() {
         }}
     >
         <div className="progress-fill"
-            style={{height: "100%", backgroundColor: "rgb(100, 90, 90)", width: progressWidth + '%'}}>
+            style={{height: "100%", backgroundColor: "rgb(0, 20, 20)", width: progressWidth + '%'}}>
         </div>
-        <div style={{height: '50px', backgroundColor: "rgb(255, 255, 250)", boxShadow: '0px 0px 15px 0px rgba(0, 0, 0, 0.2)'}}>
+        <div style={{height: '50px', backgroundColor: "rgb(255, 255, 250)", boxShadow: '0px 0px 15px 0px rgba(0, 0, 0, 0.1)'}}>
           <h3 
             style={{
                 fontSize: "20px",
-                color: "rgb(100, 90, 90)",
+                color: "rgb(0, 20, 20)",
                 position:"fixed",
                 top:"15px",
                 left:"0",
